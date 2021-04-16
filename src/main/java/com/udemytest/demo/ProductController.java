@@ -18,9 +18,12 @@ public class ProductController {
 	@GetMapping("/product/details/{productID}")
 	public ProductModel getProductDetails(@PathVariable Long productID) {
 		
+		//getProductInfo(productID);
+		//System.out.println("Hello");
 		ProductInfo prod = getProductInfo(productID);
-		//return null;
-		return new ProductModel(prod.getProductId(),prod.getProductDescription(),prod.getProductName(),99,true);
+		
+		//return new ProductModel(prod.getProductId(),prod.getProductDescription(),prod.getProductName(),99,true);
+		return new ProductModel(101L,"Name","Desc",99,true);
 	}
 	
 	//This is to test the root URL is working or not
